@@ -100,8 +100,8 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_15sdp"
         app:cardCornerRadius="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/card1Address"
+        app:layout_constraintStart_toStartOf="@+id/card1Address"
         app:layout_constraintTop_toBottomOf="@+id/card1Address">
 
         <LinearLayout
@@ -136,12 +136,13 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_200sdp"
-        android:layout_marginStart="@dimen/_15sdp"
-        android:layout_marginEnd="@dimen/_15sdp"
-        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_margin="@dimen/_15sdp"
         app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="@+id/cardPayment"
+        app:layout_constraintStart_toStartOf="@+id/cardPayment"
         app:layout_constraintTop_toBottomOf="@+id/cardPayment">
 
         <LinearLayout
@@ -152,10 +153,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/_2sdp"
-                 android:background="@drawable/corner"
-                android:backgroundTint="#F8F8F8"
                 android:layout_margin="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:background="@drawable/corner"
+                android:backgroundTint="#F8F8F8"
                 android:orientation="horizontal">
 
                 <androidx.appcompat.widget.AppCompatImageView
@@ -171,7 +172,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/_10sdp"
-                      android:padding="@dimen/_11sdp"
+                    android:padding="@dimen/_11sdp"
                     android:text="Add promo code"
                     android:textColor="@color/main_color"
                     android:textSize="@dimen/_10sdp">
@@ -179,146 +180,156 @@
                 </androidx.appcompat.widget.AppCompatTextView>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                 android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
-                 android:orientation="horizontal">
+                android:orientation="horizontal">
 
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                      android:layout_weight="1"
-                     android:text="Subtotal"
+                    android:layout_weight="1"
+                    android:text="Subtotal"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_10sdp">
 
                 </androidx.appcompat.widget.AppCompatTextView>
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/subTotal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_10sdp"
-                     android:layout_weight="1"
                     android:layout_gravity="end"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="1"
                     android:gravity="end"
-                     android:text="₹6,949"
+                    android:text="₹00"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_10sdp">
 
                 </androidx.appcompat.widget.AppCompatTextView>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                 android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
-                 android:orientation="horizontal">
+                android:orientation="horizontal">
 
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                      android:layout_weight="1"
-                     android:text="Delivery fee"
+                    android:layout_weight="1"
+                    android:text="Delivery fee"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_10sdp">
 
                 </androidx.appcompat.widget.AppCompatTextView>
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/deliveryFee"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_10sdp"
-                     android:layout_weight="1"
                     android:layout_gravity="end"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="1"
                     android:gravity="end"
-                     android:text="₹200"
+                    android:text="₹00"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_10sdp">
 
                 </androidx.appcompat.widget.AppCompatTextView>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                 android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
-                 android:orientation="horizontal">
+                android:orientation="horizontal">
 
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                      android:layout_weight="1"
-                     android:text="Discount"
+                    android:layout_weight="1"
+                    android:text="Discount"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_10sdp">
 
                 </androidx.appcompat.widget.AppCompatTextView>
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/discount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_10sdp"
-                     android:layout_weight="1"
                     android:layout_gravity="end"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="1"
                     android:gravity="end"
-                     android:text="₹0"
+                    android:text="₹0"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_10sdp">
 
                 </androidx.appcompat.widget.AppCompatTextView>
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                 android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginEnd="@dimen/_10sdp"
-                 android:orientation="horizontal">
+                android:orientation="horizontal">
 
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                      android:layout_weight="1"
-                     android:text="GST"
+                    android:layout_weight="1"
+                    android:text="GST"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_10sdp">
 
                 </androidx.appcompat.widget.AppCompatTextView>
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/gst"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/_10sdp"
-                     android:layout_weight="1"
                     android:layout_gravity="end"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_weight="1"
                     android:gravity="end"
-                     android:text="₹0"
+                    android:text="₹0"
                     android:textColor="@color/black"
                     android:textSize="@dimen/_10sdp">
 
                 </androidx.appcompat.widget.AppCompatTextView>
 
             </LinearLayout>
+
             <androidx.viewpager.widget.ViewPager
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_1sdp"
                 android:layout_marginStart="@dimen/_10sdp"
-                android:layout_marginEnd="@dimen/_10sdp"
                 android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
                 android:background="@color/gray_text">
 
             </androidx.viewpager.widget.ViewPager>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -334,22 +345,23 @@
                     android:layout_weight="1"
                     android:text="Total bill"
                     android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/_10sdp">
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold">
 
                 </androidx.appcompat.widget.AppCompatTextView>
 
                 <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/totalAmt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="end"
                     android:layout_marginStart="@dimen/_10sdp"
                     android:layout_weight="1"
-                    android:layout_gravity="end"
                     android:gravity="end"
-                    android:textStyle="bold"
-                    android:text="₹7,149"
+                    android:text="₹00"
                     android:textColor="@color/black"
-                    android:textSize="@dimen/_10sdp">
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold">
 
                 </androidx.appcompat.widget.AppCompatTextView>
 
@@ -357,4 +369,77 @@
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@+id/cardView2"
+        app:layout_constraintStart_toStartOf="@+id/cardView2"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp">
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:gravity="start"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioFollowing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:text="Cash on Delivery"
+                    android:checked="true"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold">
+
+                </RadioButton>
+
+                <RadioButton
+                    android:id="@+id/radioNotFollowing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="Online Payment"
+                    android:clickable="false"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold">
+
+                </RadioButton>
+            </RadioGroup>
+
+        </LinearLayout>
+
+
+     </LinearLayout>
+
+    <ng.max.slideview.SlideView
+        android:id="@+id/slideView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_15sdp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:sv_animateSlideText="true"
+        app:sv_buttonBackgroundColor="@color/main_color"
+        app:sv_buttonImage="@drawable/slide"
+        app:sv_reverseSlide="false"
+        app:sv_slideBackgroundColor="@color/main_color"
+        app:sv_slideText="Slide to Order now!"
+        app:sv_slideTextColor="@color/white"
+        app:sv_slideTextSize="@dimen/_11sdp"
+        app:sv_strokeColor="@color/main_color"
+        tools:ignore="MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

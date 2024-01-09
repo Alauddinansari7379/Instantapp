@@ -1,5 +1,6 @@
 package com.example.instantapp.categories
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -27,8 +28,21 @@ class CategoriesFragment : Fragment() {
 
         with(binding){
             cardMen.setOnClickListener {
-                startActivity(Intent(activity,Listing::class.java))
+                val intent = Intent(context as Activity, Listing::class.java)
+                    .putExtra("value", "MEN")
+                (context as Activity).startActivity(intent)
             }
+            cardWomen.setOnClickListener {
+                val intent = Intent(context as Activity, Listing::class.java)
+                    .putExtra("value", "WOMEN")
+                (context as Activity).startActivity(intent)
+            }
+            cardKids.setOnClickListener {
+                val intent = Intent(context as Activity, Listing::class.java)
+                    .putExtra("value", "KIDS")
+                (context as Activity).startActivity(intent)
+            }
+
         }
     }
 

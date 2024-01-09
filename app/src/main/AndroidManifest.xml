@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,6 +14,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Instantapp"
         tools:targetApi="31">
+        <activity
+            android:name=".wishlist.HelpCenter"
+            android:exported="false" />
+        <activity
+            android:name=".mainActivity.SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".wishlist.Wishlist"
+            android:exported="false" />
+        <activity
+            android:name=".setting.Settings"
+            android:exported="false" />
+        <activity
+            android:name=".order.Order"
+            android:exported="false" />
         <activity
             android:name=".cart.AddCard"
             android:exported="false" />
@@ -24,8 +42,9 @@
             android:name=".login.SignUp"
             android:exported="false" />
         <activity
-            android:name=".login.Login"
-            android:exported="false" />
+            android:name=".mainActivity.MainActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".listing.DetailPage"
             android:exported="false" />
@@ -33,11 +52,10 @@
             android:name=".listing.Listing"
             android:exported="false" />
         <activity
-            android:name=".splashScreen.SplashScreen"
-
+            android:name=".login.Login"
             android:exported="false" />
         <activity
-            android:name=".mainActivity.MainActivity"
+            android:name=".splashScreen.SplashScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

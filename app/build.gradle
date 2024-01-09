@@ -8,11 +8,11 @@ android {
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.instantapp"
+        applicationId "com.amtech.instantapp"
         minSdk 21
         targetSdk 33
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -30,8 +30,12 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures{ version "2.3.0"
-        viewBinding=true
+    buildFeatures {
+        version "2.3.0"
+        viewBinding = true
+    }
+    dataBinding {
+        enabled true
     }
 
 
@@ -39,7 +43,6 @@ android {
 
 dependencies {
     def nav_version = "2.5.2"
-
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.9.0'
@@ -51,7 +54,6 @@ dependencies {
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
     //circleImage
     implementation 'de.hdodenhof:circleimageview:3.1.0'
-
     // (Retrofit dependencies)
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
@@ -67,7 +69,6 @@ dependencies {
     implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.9'
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
-
     //SweetAlert
     implementation 'com.github.f0ris.sweetalert:library:1.6.2'
     //Counter Code Picker
@@ -104,7 +105,8 @@ dependencies {
     //Auto IMge Slider
     implementation 'com.github.Fuadafdhal:Auto-Image-Slider:1.0'
 
-
+    //swipeButton
+    implementation 'com.github.MAXDeliveryNG:slideview:1.1.0'
 
 
 }

@@ -63,152 +63,257 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout2">
 
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:id="@+id/parentLayout"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-             app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0"
             tools:layout_editor_absoluteX="0dp">
+        <LinearLayout
+            android:id="@+id/layoutCongratulation"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/_100sdp"
+                android:background="@drawable/congros"
+                android:layout_height="@dimen/_100sdp">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card1"
+            </androidx.appcompat.widget.AppCompatImageView>
+            <androidx.appcompat.widget.AppCompatTextView
+                 android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textAlignment="center"
+                android:text="Congratulation!"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:text="Your order has been placed. Your order reference number is BRJ388290.">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvViewOrderDetial"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                 android:textAlignment="center"
+                android:text="View Order Details"
+                 android:textColor="@color/main_color"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold">
+
+            </androidx.appcompat.widget.AppCompatTextView>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_15sdp"
-                app:cardCornerRadius="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
-                tools:ignore="NotSibling">
+                android:orientation="vertical">
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_2sdp"
-                    android:orientation="vertical">
+                    android:layout_margin="@dimen/_15sdp"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+                    tools:ignore="NotSibling">
 
-                    <androidx.appcompat.widget.AppCompatTextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:text="Street Address"
-                        android:textColor="#757575"
-                        android:textSize="@dimen/_9sdp">
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:orientation="vertical">
 
-                    </androidx.appcompat.widget.AppCompatTextView>
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Street Address"
+                            android:textColor="#757575"
+                            android:textSize="@dimen/_9sdp">
 
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_20sdp"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:background="@null"
-                        android:hint="12 A, Madrasi street"
-                        android:imeOptions="actionNext"
-                        android:inputType="text"
-                        android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold">
+                        </androidx.appcompat.widget.AppCompatTextView>
 
-                    </androidx.appcompat.widget.AppCompatEditText>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:background="@null"
+                            android:hint="12 A, Madrasi street"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_15sdp"
-                app:cardCornerRadius="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/card1">
+                        </androidx.appcompat.widget.AppCompatEditText>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_2sdp"
-                    android:orientation="vertical">
+                    android:layout_margin="@dimen/_15sdp"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/card1">
 
-                    <androidx.appcompat.widget.AppCompatTextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:text="City"
-                        android:textColor="#757575"
-                        android:textSize="@dimen/_9sdp">
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:orientation="vertical">
 
-                    </androidx.appcompat.widget.AppCompatTextView>
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="City"
+                            android:textColor="#757575"
+                            android:textSize="@dimen/_9sdp">
 
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/_20sdp"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:background="@null"
-                        android:hint="Mumbai"
-                        android:imeOptions="actionNext"
-                        android:inputType="text"
-                         android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold">
+                        </androidx.appcompat.widget.AppCompatTextView>
 
-                    </androidx.appcompat.widget.AppCompatEditText>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtCity"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:background="@null"
+                            android:hint="Mumbai"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="@dimen/_15sdp"
-                app:cardCornerRadius="10dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/card2">
+                        </androidx.appcompat.widget.AppCompatEditText>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
-                <LinearLayout
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/_2sdp"
-                    android:orientation="vertical">
+                    android:layout_margin="@dimen/_15sdp"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/card2">
 
-                    <androidx.appcompat.widget.AppCompatTextView
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_5sdp"
-                        android:text="State"
-                        android:textColor="#757575"
-                        android:textSize="@dimen/_9sdp">
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:orientation="vertical">
 
-                    </androidx.appcompat.widget.AppCompatTextView>
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="State"
+                            android:textColor="#757575"
+                            android:textSize="@dimen/_9sdp">
 
-                    <androidx.appcompat.widget.AppCompatEditText
+                        </androidx.appcompat.widget.AppCompatTextView>
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtState"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:background="@null"
+                            android:hint="Maharashra"
+                            android:imeOptions="actionNext"
+                            android:inputType="text"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold">
+
+                        </androidx.appcompat.widget.AppCompatEditText>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_15sdp"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintEnd_toEndOf="@+id/card3"
+                    app:layout_constraintStart_toStartOf="@+id/card3"
+                    app:layout_constraintTop_toBottomOf="@+id/card3">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_20sdp"
-                        android:layout_marginStart="@dimen/_10sdp"
-                        android:background="@null"
-                        android:hint="Maharashra"
-                        android:imeOptions="actionDone"
-                        android:inputType="text"
-                         android:textSize="@dimen/_10sdp"
-                        android:textStyle="bold">
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:orientation="vertical">
 
-                    </androidx.appcompat.widget.AppCompatEditText>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="Zid Code"
+                            android:textColor="#757575"
+                            android:textSize="@dimen/_9sdp">
+
+                        </androidx.appcompat.widget.AppCompatTextView>
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtZipCode"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:background="@null"
+                            android:hint="271313"
+                            android:imeOptions="actionDone"
+                            android:inputType="number"
+                            android:maxLength="6"
+                            android:textSize="@dimen/_10sdp"
+                            android:textStyle="bold">
+
+                        </androidx.appcompat.widget.AppCompatEditText>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="bottom"
                 android:gravity="bottom"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnLogin"
+                    android:id="@+id/btnPlaceOrder"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/_30sdp"
                     android:layout_marginStart="@dimen/_20sdp"
@@ -216,16 +321,16 @@
                     android:layout_marginBottom="@dimen/_30sdp"
                     android:background="@drawable/corner_login"
                     android:backgroundTint="@color/main_color"
-                    android:text="Save and Continue"
+                    android:text="Place Order"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_11sdp">
 
                 </androidx.appcompat.widget.AppCompatButton>
             </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
 
     </ScrollView>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

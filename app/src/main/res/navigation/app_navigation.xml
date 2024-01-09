@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragment_Home"
-        android:name="com.example.instantapp.home.HomeFragment"
+        android:name="com.example.instantapp.home.activity.HomeFragment"
         tools:layout="@layout/fragment_home"
         android:label="Home" />
     <fragment

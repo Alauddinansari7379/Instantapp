@@ -10,6 +10,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
+        android:scrollbars="none"
         android:layout_height="wrap_content">
 
         <LinearLayout
@@ -19,6 +20,7 @@
 
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardWomen"
                 android:layout_width="match_parent"
                 android:layout_height="180dp"
                 android:layout_marginStart="@dimen/_15sdp"
@@ -88,6 +90,7 @@
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cardKids"
                     android:layout_width="match_parent"
                     android:layout_height="165dp"
                     android:layout_marginStart="@dimen/_2sdp"
