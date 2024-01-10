@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Instantapp"
         tools:targetApi="31">
         <activity
+            android:name=".order.OrderDetails"
+            android:exported="false" />
+        <activity
             android:name=".wishlist.HelpCenter"
             android:exported="false" />
         <activity
